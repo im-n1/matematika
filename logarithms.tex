@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt]{article}
+\input{./_preamble.tex}
+\title{Logaritmy}
+
+\begin{document}
+\maketitle
+
+\section{Obecné}
+\begin{equation*}
+    \scalebox{1.6}{$
+        y = \log_{a} x
+    $}
+\end{equation*}
+\begin{description}
+    \item[\boldmath{$y$}] - výsledný exponent mocniny, který hledáme (mocnitel)
+    \item[\boldmath{$a$}] - základ (mocněnec)
+    \item[\boldmath{$x$}] - výdledek mocnění $mocnenec^{mocnitel}$
+\end{description}
+
+platí:
+
+\begin{equation*}
+    \scalebox{1.6}{$y = \log_{a} x$}
+\end{equation*}
+\begin{center}
+    je rovno
+\end{center}
+\begin{equation*}
+    \scalebox{1.6}{$x = a^y$}
+\end{equation*}
+
+\section{Vlastnosti logaritmů}
+\begin{description}
+    \item{\boldmath{$\log_b b = 1$}}\\
+        logaritmus toho samého čísla je vždy 1\\
+        např: $\log_{10} 10 = 1$ protože $10^1 = 10$
+    \item{\boldmath{$\log_b 1 = 0$}}\\
+        logaritmus jedné při jakémkoli základu je vždy 0\\
+        např: $\log_5 1 = 0$ protože $5^0 = 1$
+    \item{\textbf{násobení}}\\
+        logaritmus součinu je součet logaritnů jednotlivých činitelů
+        \begin{equation*}
+            \log_b ac = \log_b a + \log_b c
+        \end{equation*}
+    \item{\textbf{dělení}}\\
+        logaritmus podílu je rozdíl logaritmů čitatele a jmenovatele
+        \begin{equation*}
+            \log_b \frac a c = \log_b a - \log_b c
+        \end{equation*}
+\end{description}
+
+{
+    \definecolor{red}{RGB}{199, 68, 64}
+    \begin{figure}[ht]
+        \definecolor{violet}{RGB}{96, 66, 166}
+        \includegraphics[width=\textwidth]{./imgs/logaritmy/log_comparison.png}
+        \caption{
+            porovnání \textcolor{red}{$\log_2 x$}, \textcolor{violet}{$log_3 x$}, $log_4 x$\\
+        }
+    \end{figure}
+
+    Základ logaritmu udává kolika-násobek $x$ je další stupeň na $y$. Jinými slovy
+    základ logaritmu (na obrázku jako $\log$ 2, 3 a 4) udává násobek mezi jednotlivými
+    stupni $x$. Kupříkladu abych se pro \textcolor{red}{$\log_3 x$} na ose $y$ mohl
+    posunout z 1 (rovno 3 na ose $x$) na 2, musím na ose $x$ popojít 3-krát aktuální
+    hodnotu - $3*3 = 9$.
+}
+
+\end{document}
